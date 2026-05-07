@@ -1,0 +1,134 @@
+/* style.css */
+
+:root {
+    --primary-color: #1e3a8a; /* Bleu Indigo */
+    --accent-color: #3b82f6;  /* Bleu Clair */
+    --text-dark: #1f2937;
+    --text-light: #f9fafb;
+    --bg-color: #f3f4f6;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Hero Section */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+h2 {
+    font-weight: 300;
+    color: #93c5fd;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.contact-info span {
+    margin: 0 10px;
+}
+
+/* Bouton CV */
+.btn-cv {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-cv:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Cartes de contenu */
+.card {
+    background: var(--white);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h3 {
+    color: var(--primary-color);
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+/* Grille de compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--text-dark);
+    color: #9ca3af;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        padding: 40px 0;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
